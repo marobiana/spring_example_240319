@@ -17,6 +17,12 @@ public class ReviewBO {
 	public Review getReviewById(int id) {
 		return reviewMapper.selectReviewById(id);
 	}
+	
+	// input: Review
+	// output: 성공한 행의 개수(int)
+	public int addReview(Review review) {
+		return reviewMapper.insertReview(review);
+	}
 }
 
 

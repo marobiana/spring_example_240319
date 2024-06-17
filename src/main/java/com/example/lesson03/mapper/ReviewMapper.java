@@ -9,6 +9,8 @@ public interface ReviewMapper {
 
 	// input:id   output:Review or null
 	public Review selectReviewById(int id);
+	
+	public int insertReview(Review review);
 }
 
 
