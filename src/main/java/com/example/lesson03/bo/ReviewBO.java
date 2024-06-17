@@ -23,6 +23,18 @@ public class ReviewBO {
 	public int addReview(Review review) {
 		return reviewMapper.insertReview(review);
 	}
+	
+	public int addReviewAsField(int storeId, String menu, 
+			String userName, Double point, String review) {
+		
+		return reviewMapper.insertReviewAsField(storeId, menu, userName, point, review);
+	}
+	
+	// input: id, review
+	// output: 성공한 행 개수
+	public int updateReviewById(int id, String review) {
+		return reviewMapper.updateReviewById(id, review);
+	}
 }
 
 

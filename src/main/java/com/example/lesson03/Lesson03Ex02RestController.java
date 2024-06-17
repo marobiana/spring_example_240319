@@ -30,7 +30,26 @@ public class Lesson03Ex02RestController {
 		// html
 		return "성공한 행의 개수:" + rowCount; // String + int => String
 	}
+	
+	// http://localhost/lesson03/ex02/2
+	@RequestMapping("/2")
+	public String ex02_2() {
+//		storeId
+//		menu
+//		userName
+//		point
+//		review
+		int rowCount = reviewBO.addReviewAsField(
+				4, "콤비네이션R", "꾸꾸", 5.0, "역시 맛있다 도미노!");
+		return "성공한 행의 개수:" + rowCount;
+	}
 }
+
+
+
+
+
+
 
 
 
