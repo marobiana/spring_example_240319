@@ -23,7 +23,7 @@ public class Lesson07Ex01RestController {
 		String email = "jina@naver.com";
 		String dreamJob = "간호사";
 		
-		
+		return studentBO.addStudent(name, phoneNumber, email, dreamJob);
 	}
 }
 
