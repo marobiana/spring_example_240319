@@ -1,6 +1,7 @@
 package com.example.lesson04.bo;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -66,6 +67,20 @@ public class StudentBO {
 	// output: Student
 	public Student getStudentById(int id) {
 		return studentMapper.selectStudentById(id);
+	}
+	
+	// input: id
+	// output: X
+	public void deleteStudentById(int id) {
+		// 방법1)
+//		StudentEntity student = studentRepository.findById(id).orElse(null);
+//		if (student != null) {
+//			studentRepository.delete(student);
+//		}
+		
+		// 방법2)
+		Optional<StudentEntity> studentOptional = studentRepository.findById(id);
+		studentOptional.ifPresent(s -> studentRepository.delete(s));
 	}
 }
 
