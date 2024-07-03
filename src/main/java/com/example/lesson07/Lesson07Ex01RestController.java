@@ -25,6 +25,13 @@ public class Lesson07Ex01RestController {
 		
 		return studentBO.addStudent(name, phoneNumber, email, dreamJob);
 	}
+	
+	// U: Update
+	@GetMapping("/update")
+	public StudentEntity update() {
+		// id가 7번인 dreamJob 변경(기획자)
+		return studentBO.updateStudentDreamJobById(7, "기획자");
+	}
 }
 
 

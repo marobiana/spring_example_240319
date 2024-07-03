@@ -8,6 +8,7 @@ public interface StudentRepository extends JpaRepository<StudentEntity, Integer>
 
 	// Spring Data JPA vs 순수 JPA
 	// public StudentEntity save(StudentEntity student)
+	// public StudentEntity findById(int id)
 }
 
 
